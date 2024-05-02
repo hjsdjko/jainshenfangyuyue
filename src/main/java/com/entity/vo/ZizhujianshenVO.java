@@ -1,0 +1,211 @@
+package com.entity.vo;
+
+import com.entity.ZizhujianshenEntity;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.io.Serializable;
+
+/**
+ * 自助健身
+ * 手机端接口返回实体辅助类
+ * （主要作用去除一些不必要的字段）
+ */
+@TableName("zizhujianshen")
+public class ZizhujianshenVO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+
+    /**
+     * 主键
+     */
+
+    @TableField(value = "id")
+    private Integer id;
+
+
+    /**
+     * 自助健身名称
+     */
+
+    @TableField(value = "zizhujianshen_name")
+    private String zizhujianshenName;
+
+
+    /**
+     * 自助健身类型
+     */
+
+    @TableField(value = "zizhujianshen_types")
+    private Integer zizhujianshenTypes;
+
+
+    /**
+     * 自助健身图片
+     */
+
+    @TableField(value = "zizhujianshen_photo")
+    private String zizhujianshenPhoto;
+
+
+    /**
+     * 可预约人数
+     */
+
+    @TableField(value = "zizhujianshen_number")
+    private Integer zizhujianshenNumber;
+
+
+    /**
+     * 可预约时间
+     */
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat
+
+    @TableField(value = "zizhujianshen_time")
+    private Date zizhujianshenTime;
+
+
+    /**
+     * 自助健身详情
+     */
+
+    @TableField(value = "zizhujianshen_content")
+    private String zizhujianshenContent;
+
+
+    /**
+     * 创建时间 show1 show2 photoShow
+     */
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat
+
+    @TableField(value = "create_time")
+    private Date createTime;
+
+
+    /**
+	 * 设置：主键
+	 */
+    public Integer getId() {
+        return id;
+    }
+
+
+    /**
+	 * 获取：主键
+	 */
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    /**
+	 * 设置：自助健身名称
+	 */
+    public String getZizhujianshenName() {
+        return zizhujianshenName;
+    }
+
+
+    /**
+	 * 获取：自助健身名称
+	 */
+
+    public void setZizhujianshenName(String zizhujianshenName) {
+        this.zizhujianshenName = zizhujianshenName;
+    }
+    /**
+	 * 设置：自助健身类型
+	 */
+    public Integer getZizhujianshenTypes() {
+        return zizhujianshenTypes;
+    }
+
+
+    /**
+	 * 获取：自助健身类型
+	 */
+
+    public void setZizhujianshenTypes(Integer zizhujianshenTypes) {
+        this.zizhujianshenTypes = zizhujianshenTypes;
+    }
+    /**
+	 * 设置：自助健身图片
+	 */
+    public String getZizhujianshenPhoto() {
+        return zizhujianshenPhoto;
+    }
+
+
+    /**
+	 * 获取：自助健身图片
+	 */
+
+    public void setZizhujianshenPhoto(String zizhujianshenPhoto) {
+        this.zizhujianshenPhoto = zizhujianshenPhoto;
+    }
+    /**
+	 * 设置：可预约人数
+	 */
+    public Integer getZizhujianshenNumber() {
+        return zizhujianshenNumber;
+    }
+
+
+    /**
+	 * 获取：可预约人数
+	 */
+
+    public void setZizhujianshenNumber(Integer zizhujianshenNumber) {
+        this.zizhujianshenNumber = zizhujianshenNumber;
+    }
+    /**
+	 * 设置：可预约时间
+	 */
+    public Date getZizhujianshenTime() {
+        return zizhujianshenTime;
+    }
+
+
+    /**
+	 * 获取：可预约时间
+	 */
+
+    public void setZizhujianshenTime(Date zizhujianshenTime) {
+        this.zizhujianshenTime = zizhujianshenTime;
+    }
+    /**
+	 * 设置：自助健身详情
+	 */
+    public String getZizhujianshenContent() {
+        return zizhujianshenContent;
+    }
+
+
+    /**
+	 * 获取：自助健身详情
+	 */
+
+    public void setZizhujianshenContent(String zizhujianshenContent) {
+        this.zizhujianshenContent = zizhujianshenContent;
+    }
+    /**
+	 * 设置：创建时间 show1 show2 photoShow
+	 */
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+
+    /**
+	 * 获取：创建时间 show1 show2 photoShow
+	 */
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+}
